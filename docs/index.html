@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kaartje Kroatië 🇭🇷</title>
+  <title>Zus in Kroatië 🇭🇷</title>
   <style>
     body {
       margin: 0;
@@ -31,19 +31,24 @@
       z-index: 1;
     }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      animation: fadeIn 2s forwards;
-      opacity: 0;
+    h1, h2, p, li {
       text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeEffect 2s forwards;
+    }
+
+    @keyframes fadeEffect {
+      to { opacity: 1; }
     }
 
     .map-container {
       position: relative;
       max-width: 800px;
-      margin: 0 auto;
-      animation: fadeIn 2s forwards;
+      margin: 40px auto;
+      animation: fadeEffect 2s forwards;
       opacity: 0;
     }
 
@@ -71,7 +76,17 @@
       background-color: #ffcc00;
     }
 
-    @keyframes fadeIn {
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li::before {
+      content: "🌟 ";
+      margin-right: 5px;
+    }
+
+    @keyframes fadeEffect {
       to { opacity: 1; }
     }
 
@@ -85,7 +100,17 @@
 <body>
   <div class="overlay"></div>
 
-  <h1>🗺️ Mooie plekken in Kroatië</h1>
+  <h1 class="fade-in">🌞 Dag zus en vriendjes — vele groetjes daar in Kroatië! 🎉</h1>
+  <p class="fade-in">Hey zus! Hier zijn wat leuke zinnetjes voor je vakantie:</p>
+  <ul class="fade-in">
+    <li><strong>Goedemorgen</strong> → Dobro jutro</li>
+    <li><strong>Hoe gaat het?</strong> → Kako si?</li>
+    <li><strong>Dank je wel</strong> → Hvala</li>
+    <li><strong>Tot ziens</strong> → Doviđenja</li>
+    <li><strong>Proost!</strong> → Živjeli!</li>
+  </ul>
+
+  <h2 class="fade-in">🗺️ Mooie plekken in Kroatië</h2>
 
   <div class="map-container">
     <img src="kaart-kroatie.jpg" alt="Kaart van Kroatië">
