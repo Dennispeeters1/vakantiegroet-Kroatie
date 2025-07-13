@@ -44,6 +44,16 @@
       to { opacity: 1; }
     }
 
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li::before {
+      content: "🌟 ";
+      margin-right: 5px;
+    }
+
     .map-container {
       position: relative;
       max-width: 800px;
@@ -76,18 +86,22 @@
       background-color: #ffcc00;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    button {
+      background-color: #ffd700;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      color: #333;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+      margin: 30px auto;
+      display: block;
+      animation: fadeEffect 2s forwards;
     }
 
-    li::before {
-      content: "🌟 ";
-      margin-right: 5px;
-    }
-
-    @keyframes fadeEffect {
-      to { opacity: 1; }
+    button:hover {
+      background-color: #ffcc00;
     }
 
     /* Hotspot posities (schatting op kaart) */
@@ -119,5 +133,7 @@
     <div class="hotspot" id="split" onclick="alert('Split: Romeinse paleizen en zeezicht!')">Split</div>
     <div class="hotspot" id="rovinj" onclick="alert('Rovinj: Kleurrijke huizen aan het water!')">Rovinj</div>
   </div>
+
+  <button onclick="alert('💌 Groetjes daar Kroatië! En stuur mooit foto naar broer ❤️ Veel plezier daar 🌞🇭🇷🎉')">Klik voor groetjes</button>
 </body>
 </html>
