@@ -8,11 +8,27 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f8ff;
+      background-image: url('achtergrond.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       padding: 5%;
       font-size: 1.1rem;
       line-height: 1.6;
-      color: #333;
+      color: #fff;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 0;
+    }
+
+    body > *:not(.overlay) {
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -20,6 +36,7 @@
       margin-bottom: 20px;
       animation: fadeIn 2s forwards;
       opacity: 0;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
     }
 
     .map-container {
@@ -46,6 +63,7 @@
       cursor: pointer;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
       transition: transform 0.2s;
+      color: #333;
     }
 
     .hotspot:hover {
@@ -65,6 +83,8 @@
   </style>
 </head>
 <body>
+  <div class="overlay"></div>
+
   <h1>🗺️ Mooie plekken in Kroatië</h1>
 
   <div class="map-container">
