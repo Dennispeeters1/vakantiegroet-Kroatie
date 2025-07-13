@@ -3,8 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Zus in Kroatië 🇭🇷</title>
-  <style>    
+  <style>
+    .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* donkergrijs met 40% transparantie */
+  z-index: 0;
+}
+
+body > *:not(.overlay) {
+  position: relative;
+  z-index: 1;
+}
+
     body {
+      <div class="overlay"></div>
+
       font-family: 'Segoe UI', sans-serif;
       background-image: url('achtergrond.jpg');
       background-size: cover;
