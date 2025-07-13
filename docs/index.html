@@ -4,26 +4,10 @@
   <meta charset="UTF-8">
   <title>Zus in Kroatië 🇭🇷</title>
   <style>
-    .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* donkergrijs met 40% transparantie */
-  z-index: 0;
-}
-
-body > *:not(.overlay) {
-  position: relative;
-  z-index: 1;
-}
-
     body {
-      <div class="overlay"></div>
-
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-image: url('achtergrond.jpg');
+      background-image: url('achtergrond.jpg.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -31,16 +15,51 @@ body > *:not(.overlay) {
       line-height: 1.6;
       color: #fff;
     }
-    h1 { color: #ffd700; }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 0;
+    }
+
+    body > *:not(.overlay) {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1, h2, p, li {
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
     ul { list-style: none; padding: 0; }
     li::before { content: "🌟 "; margin-right: 5px; }
+
     a { color: #ffddcc; text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    button {
+      background-color: #ffd700;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 8px;
+      color: #333;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #ffcc00;
+    }
   </style>
-   
 </head>
 <body>
-  <h1>🌞 Dag zus en vriendjes vele groetjes daar in  Kroatië! 🎉</h1>
+  <div class="overlay"></div>
+
+  <h1>🌞 Dag zus en vriendjes — vele groetjes daar in Kroatië! 🎉</h1>
   <p>Hey zus! Hier zijn wat leuke zinnetjes voor je vakantie:</p>
   <ul>
     <li><strong>Goedemorgen</strong> → Dobro jutro</li>
@@ -49,12 +68,14 @@ body > *:not(.overlay) {
     <li><strong>Tot ziens</strong> → Doviđenja</li>
     <li><strong>Proost!</strong> → Živjeli!</li>
   </ul>
+
   <h2>📍 Mooie plekken om te bezoeken:</h2>
   <ul>
     <li><a href="https://www.lonelyplanet.com/croatia/dubrovnik" target="_blank">Dubrovnik</a></li>
     <li><a href="https://www.np-plitvicka-jezera.hr/en/" target="_blank">Plitvice Meren</a></li>
     <li><a href="https://www.visit-croatia.co.uk/croatia-destinations/split/" target="_blank">Split</a></li>
   </ul>
-  <p>Geniet van je reis en stuur een foto 😄📸</p>
+
+  <button onclick="alert('Živjeli! Veel plezier in Kroatië 🇭🇷🎉')">Klik voor groetjes</button>
 </body>
 </html>
